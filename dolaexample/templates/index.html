@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+<div><button type="button" onclick="location.href='/login/'">Login</button></div>
+<div><button type="button" onclick="location.href='/register/'">Register</button></div>
+{% for reviews in review%}
+<div>
+	{{reviews}}
+</div>
+{% endfor%}
+</body>
+</html>

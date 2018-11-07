@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+</head>
+<body>
+<form action="" method="POST" name="review">
+	{% csrf_token %}
+	<div>
+		Bookname：<input type="text" name="bookname" id="bookname" />
+	</div>
+	<div>
+		Author：<input type="text" name="author" id="author" />
+	</div>
+	<div>
+		Genre：<input type="text" name="genre" id="genre" />
+	</div>
+	<div>
+		Ratings：<input type="text" name="ratings" id="ratings" />
+	</div>
+	<div>
+		<input type="submit" name="button" id="button" value="Submit" />
+	</div>
+</form>
+{% for reviews in review%}
+<div>
+	{{reviews}}
+	
+
+
+</div>
+{% endfor%}
+<div>
+	<button type="button" onclick="location.href='/myprofile/'">My Profile</button>
+</div>
+<div>
+	<button type="button" onclick="location.href='/logout/'">Log Out</button>
+</div>
+</body>
+</html>
